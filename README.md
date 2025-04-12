@@ -11,27 +11,27 @@
 ### 1. Tạo New Database
 ![image](https://github.com/user-attachments/assets/51310771-6945-4301-a2ff-de00087c6187)
 
-- 1.1. Tạo bảng giáo viên
+- 1.1. Tạo bảng GIAOVIEN
 ![Screenshot (461)](https://github.com/user-attachments/assets/1264688c-f58d-4444-99c8-e81a221f0bd1)
 
-- 1.2. Tạo bảng môn học
+- 1.2. Tạo bảng MONHOC
 ![Screenshot (465)](https://github.com/user-attachments/assets/e0fa0da6-9252-4f0d-9728-ae1c38c5d7c9)
 
-- 1.3. Tạo bảng lớp học
-![Screenshot (463)](https://github.com/user-attachments/assets/6917f385-13ab-4cd5-b847-69adb044f157)
+- 1.3. Tạo bảng LOPHOCPHAN
+![image](https://github.com/user-attachments/assets/c81714f5-bfdf-42b8-bd17-a131120629ec)
 
-- 1.4. Tạo bảng tkb
-![Screenshot (464)](https://github.com/user-attachments/assets/550b99fa-c4e4-4c33-be05-83fb2a461deb)
+- 1.4. Tạo bảng TKB
+![image](https://github.com/user-attachments/assets/f7203db2-111f-493c-8a95-301ee7ae232a)
 
 ### 2. Thiết lập khoá ngoại 
-![image](https://github.com/user-attachments/assets/5fea9801-c0be-4926-8490-b75743a3bb89)
+![image](https://github.com/user-attachments/assets/642093b3-bc5d-466a-9039-9b55b1e467ef)
 
 - Tại bảng lớp học, thiết lập khoá ngoại (FK)
-+ Thiết lập khoá ngoại giữa bảng (*LopHoc*) và bảng (*GiaoVien*) thông qua **MaGV**
-+ Thiết lập khoá ngoại giữa bảng (*LopHoc*) và bảng (*MonHoc*) thông qua **MaMH**
-+ Thiết lập khoá ngoại giữa bảng (*LopHoc*) và bảng (*TKB*) thông qua **MaLop**
++ Thiết lập khoá ngoại giữa bảng (*TKB*) và bảng (*GIAOVIEN*) thông qua **MaGV**
++ Thiết lập khoá ngoại giữa bảng (*TKB*) và bảng (*MONHOC*) thông qua **MaMH**
++ Thiết lập khoá ngoại giữa bảng (*TKB*) và bảng (*LOPHOCPHAN*) thông qua **MaLop**
 
-### 3. Thêm thông tin demo cho bảng GIÁO VIÊN
+### 3. Thêm thông tin demo cho bảng GIAOVIEN
 - Bước 1: Truy cập Link nguồn dữ liệu *TMS.tnut.edu.vn*
 ![image](https://github.com/user-attachments/assets/fa059624-4b66-40a1-aadd-0c6025fbd6f9)
 
@@ -75,11 +75,13 @@ Dùng để định dạng số thành chuỗi văn bản có đủ 3 chữ số
 - Sau đó ta tiến hành copy dữ liệu đầy đủ vào SQL
 ![image](https://github.com/user-attachments/assets/51f68307-e9d4-4464-aa1f-ff9d15669564)
 
-### 4. Tương tự, ta thêm thông tin demo cho bảng MÔN HỌC, LỚP HỌC VÀ TKB
-- MÔN HỌC
+### 4. Tương tự, ta thêm thông tin DEMO cho bảng MONHOC, LOPHOCPHAN và TKB
+- BẢNG MONHOC
 ![Untitled](https://github.com/user-attachments/assets/50268b4f-6855-49aa-9922-1ee096207a1a)
 
-- LỚP HỌC
-![Screenshot (477)](https://github.com/user-attachments/assets/dacb5fc3-0202-4b47-bdb1-4cc294e150f4)
+- BẢNG LOPHOCPHAN
+![image](https://github.com/user-attachments/assets/712067ea-b578-4632-ab92-34f08ca72432)
 
-- TKB
+- BẢNG TKB
+![image](https://github.com/user-attachments/assets/32851b4e-87f8-4df1-b687-2b979671de42)
+
