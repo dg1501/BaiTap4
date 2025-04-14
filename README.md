@@ -80,3 +80,47 @@
 - BẢNG TKB
 ![image](https://github.com/user-attachments/assets/32851b4e-87f8-4df1-b687-2b979671de42)
 
+### 5. Truy vấn SQL để ra thông tin gồm 4 cột: họ tên gv, môn dạy, giờ vào lớp, giờ ra.
+![Screenshot (489)](https://github.com/user-attachments/assets/8f0c65fc-1f50-4e9b-8a46-45152a7c2b1a)
+
+- **ĐÂY LÀ CODE TRUY VẤN**
+```sql
+DECLARE @datetime1 DATETIME = '2025-03-17 15:30:00';
+DECLARE @datetime2 DATETIME = '2025-03-19 18:30:00';
+
+SELECT 
+    GV.HoTen AS HoTenGV,
+    MH.TenMonHoc AS TenMonDay,
+    TKB.GioVao,
+    TKB.GioRa
+FROM TKB
+JOIN GIAOVIEN GV ON TKB.MaGV = GV.MaGV
+JOIN MONHOC MH ON TKB.MaMH = MH.MaMH
+WHERE 
+    (TKB.GioVao BETWEEN CAST(@datetime1 AS TIME) AND CAST(@datetime2 AS TIME)) 
+    OR
+    (TKB.GioRa BETWEEN CAST(@datetime1 AS TIME) AND CAST(@datetime2 AS TIME)) 
+    OR
+    (CAST(@datetime1 AS TIME) BETWEEN TKB.GioVao AND TKB.GioRa)
+    OR
+    (CAST(@datetime2 AS TIME) BETWEEN TKB.GioVao AND TKB.GioRa);
+```
+
+### 6. GIẢI THÍCH CODE
++ Khai báo biến thời gian
+```
+DECLARE @datetime1 DATETIME = '2025-03-17 15:30:00';**
+DECLARE @datetime2 DATETIME = '2025-03-19 18:30:00';**
+```
+
++ Điều kiện lọc theo khung giờ
+```
+WHERE 
+    (TKB.GioVao BETWEEN CAST(@datetime1 AS TIME) AND CAST(@datetime2 AS TIME)) 
+    OR
+    (TKB.GioRa BETWEEN CAST(@datetime1 AS TIME) AND CAST(@datetime2 AS TIME)) 
+    OR
+    (CAST(@datetime1 AS TIME) BETWEEN TKB.GioVao AND TKB.GioRa)
+    OR
+    (CAST(@datetime2 AS TIME) BETWEEN TKB.GioVao AND TKB.GioRa);
+```
