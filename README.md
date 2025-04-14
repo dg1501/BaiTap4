@@ -53,12 +53,6 @@
 + Bước 4: Chọn Continue With.... Selection ( Vì chúng ta chỉ cần loại bỏ các thông tin trùng lặp ở cột Tên Giáo Viên nên ta chọn Continue....selection )
 ![Untitled](https://github.com/user-attachments/assets/57e9d2ee-9a3e-4532-b89e-20b64790ffd2)
 
-+ Bước 5:
-- Khi đã được dòng dầu tiên, ta di chuột vào ô đó và kéo xuống các ô còn lại để hoàn thành công việc
-![Untitled](https://github.com/user-attachments/assets/c71c578f-fb39-4943-b879-c5409a47774b)
-
-![Untitled](https://github.com/user-attachments/assets/25a71860-a198-447e-a810-a0e705b3297c)
-
 - Tiếp theo ta chọn dòng đầu tiên của cột MaGV và gõ câu lệnh sau vào thanh công thức [=VLOOKUP(D13;$A$1:$B$13;2;FALSE)]
 ![image](https://github.com/user-attachments/assets/e72415e0-af40-4002-9685-2a34d26eaed8)
 
