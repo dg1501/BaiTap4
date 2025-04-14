@@ -42,7 +42,7 @@
 - Bước 4: Vì chưa có thông tin của trường MaGV nên ta tiến hành thêm cột **MaGV** và thêm thông tin demo cho cột
 
 + Thêm cột MaGV
-![image](https://github.com/user-attachments/assets/594ff72b-9608-4d7e-bf7a-cd4527961dfa)
+![Untitled](https://github.com/user-attachments/assets/39e30646-842d-49d9-af08-4f1bedc7295c)
 
 - Vì cột Tên Giáo viên đang có nhiều giá trị bị trùng lặp, nên ta tiến hành bước sau để xử lý chúng
 + Bước 1: Chọn cột Tên Giáo Viên
@@ -53,24 +53,25 @@
 + Bước 4: Chọn Continue With.... Selection ( Vì chúng ta chỉ cần loại bỏ các thông tin trùng lặp ở cột Tên Giáo Viên nên ta chọn Continue....selection )
 ![Untitled](https://github.com/user-attachments/assets/57e9d2ee-9a3e-4532-b89e-20b64790ffd2)
 
-- Tiếp theo ta chọn dòng đầu tiên của cột MaGV và gõ câu lệnh sau vào thanh công thức ( =TEXT(ROW()-1;"000")
-
-- **Giải thích lệnh**
-+ Hàm ROW():
-Trả về số dòng hiện tại của ô đang viết công thức.
-Ví dụ: nếu bạn viết công thức ở dòng 2 thì ROW() sẽ cho ra số 2.
-
-+ ROW() - 1:
-Vì ROW() ở dòng 2 trả về 2, nên ta trừ đi 1 để bắt đầu từ số 1.
-Tức là, kết quả sẽ là 1, 2, 3, ... tùy theo bạn đặt công thức ở dòng nào.
-
-+ Hàm TEXT(...;"000"):
-Dùng để định dạng số thành chuỗi văn bản có đủ 3 chữ số.
-
++ Bước 5:
 - Khi đã được dòng dầu tiên, ta di chuột vào ô đó và kéo xuống các ô còn lại để hoàn thành công việc
 ![Untitled](https://github.com/user-attachments/assets/c71c578f-fb39-4943-b879-c5409a47774b)
 
 ![Untitled](https://github.com/user-attachments/assets/25a71860-a198-447e-a810-a0e705b3297c)
+
+- Tiếp theo ta chọn dòng đầu tiên của cột MaGV và gõ câu lệnh sau vào thanh công thức [=VLOOKUP(D13;$A$1:$B$13;2;FALSE)]
+![image](https://github.com/user-attachments/assets/e72415e0-af40-4002-9685-2a34d26eaed8)
+
+- **Giải thích lệnh**
++ Thành phần đầu tiên (D1): là giá trị dò đầu tiên
+![Untitled](https://github.com/user-attachments/assets/57cd7a32-7851-4682-a152-8b09fcf61d3d)
+
++ Thành phần thứ 2 ($A$1:$B$13): là bảng giá trị dò. Để xác định ta tiến hành bôi đen bảng giá trị cần do và để tránh vùng dữ liệu dò bị dịch xuống thì ta chỉ cần bấm F4 trên bàn phím để cố định lại là xong
+![image](https://github.com/user-attachments/assets/321a36aa-5539-4c49-aadf-b6facc994282)
+
++ Thành phần thứ 3 (2) : tại bảng giá trị dò thì cột ta cần tìm là cột MaGV và nó nằm ở cột thứ 2 trong bảng giá trị dò nên ta điền 2 vào
+
++ Thành phần 4 (0 or FALSE): là mình sẽ tìm chính xác nên ta có thể điền 0 hoặc False
 
 - Sau đó ta tiến hành copy dữ liệu đầy đủ vào SQL
 ![image](https://github.com/user-attachments/assets/51f68307-e9d4-4464-aa1f-ff9d15669564)
